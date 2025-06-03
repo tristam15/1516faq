@@ -1,40 +1,68 @@
-# Doks
+# 1516 FAQ & Career Knowledge Base
 
-Doks is a documentation theme for [Thulite](https://thulite.io/).
+A comprehensive knowledge base for students in Andhra Pradesh & Telangana to find information about official procedures and career options based on their education level.
 
-## Demo
+## 🎯 Project Goals
 
-- [doks.netlify.app](https://doks.netlify.app/)
+| Goal | KPI / Metric | Target |
+|------|-------------|--------|
+| Accurate Info | % pages updated in last 12 months | ≥ 90% |
+| Fast Answers | Median page-load time on 3G | ≤ 1.5s |
+| Student Engagement | Avg. pages/session | ≥ 3 |
+| Discoverability | Top-10 Google rank for queries like "Income Certificate Telangana" | ≤ 3 months |
 
-## Install
+## 👥 Target Audience
 
-The recommended way to install the latest version of Doks is by running the command below:
+### Students
+- **Ravi (Class 10)**: Wants to know job options after 10th grade
+- **Suma (BSc graduate)**: Needs step-by-step guidance for certificate applications
 
-```bash
-npm create thulite@latest -- --template doks
-```
+### Contributors
+- **Volunteers**: Subject matter experts who want to contribute content without technical barriers
 
-Looking for help? Start with our [Getting Started](https://getdoks.org/docs/start-here/getting-started/) guide.
+## ✨ Key Features
 
-## Documentation
+- **Structured Content Models**
+  - Document Model for official procedures
+  - Job Model with education-level indexing
 
-Visit our [official documentation](https://getdoks.org/).
+- **Intuitive Navigation**
+  - Taxonomy-based browsing (qualifications, sectors, issuers)
+  - Clean, memorable URLs
 
-## Support
+- **Powerful Search**
+  - Client-side search with Fuse.js
+  - Fast filtering options
 
-Having trouble? Get help in the official [Doks Discussions](https://github.com/thuliteio/doks/discussions).
+- **Easy Content Management**
+  - Decap CMS integration
+  - Role-based access control
+  - No Git knowledge required
 
-## Contributing
+- **Mobile-First Design**
+  - Responsive layout
+  - Fast performance on all devices
+  - Accessible interface
 
-New contributors welcome! Check out our [Contributor Guides](https://getdoks.org/contribute/) for help getting started.
+## 🛠️ Technology Stack
 
-## Links
+- **Static Site Generator**: Hugo
+- **CMS**: Decap (Netlify CMS)
+- **Search**: Fuse.js
+- **Hosting**: Netlify
+- **Theme**: Custom Doks-based theme
 
-- [License (MIT)](LICENSE)
-- [Code of Conduct](https://github.com/thuliteio/.github/blob/main/CODE_OF_CONDUCT.md)
-- [Project Funding](.github/FUNDING.md)
-- [Website](https://getdoks.org/)
+## 🚀 Getting Started
 
-## Sponsors
+### Prerequisites
+- Node.js 16+ & npm
+- Hugo (extended version)
 
-Doks is free, open source software made possible by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md) ❤️
+
+## 🤝 Contributing
+
+We welcome contributions! Please read our [Contribution Guidelines](CONTRIBUTING.md) to get started.
+
+## 📄 License
+
+This project is [MIT licensed](LICENSE).
