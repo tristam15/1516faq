@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
     <!-- Include the script that makes Decap CMS work. -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js" defer></script>
     <style>
       /* Add some basic styling */
       body {
@@ -59,9 +59,23 @@
       }
 
       // Initialize CMS when the page loads
-      window.addEventListener('DOMContentLoaded', function() {
-        // Initialize Decap CMS
-        CMS.init();
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add a small delay to ensure everything is loaded
+        setTimeout(function() {
+          console.log('Initializing CMS...');
+          // Initialize Decap CMS
+          CMS.init();
+          
+          // Log CMS events for debugging
+          if (CMS.registerEventListener) {
+            CMS.registerEventListener({
+              name: 'cms-debug-events',
+              onEvent: function(event) {
+                console.log('CMS Event:', event.name, event);
+              }
+            });
+          }
+        }, 100);
       });
     </script>
   </body>
