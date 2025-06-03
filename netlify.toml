@@ -7,6 +7,25 @@
   NPM_VERSION = "10.2.4"
   HUGO_VERSION = "0.125.1"
 
+# Enable Identity and Git Gateway
+[identity]
+  auto_initialize = true
+
+[identity.external]
+  provider = ["github"]
+
+# Enable Git Gateway
+[git_gateway]
+  allowed_roles = ["admin"]
+  enabled = true
+
+# Enable large media
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
 [context.production]
   command = "npm run build"
 

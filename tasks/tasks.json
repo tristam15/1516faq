@@ -111,9 +111,11 @@
     {
       "id": 7,
       "title": "Decap CMS Integration",
-      "status": "pending",
+      "status": "done",
       "description": "Configure Decap CMS for content management",
-      "createdAt": "2025-06-03T08:30:00Z"
+      "createdAt": "2025-06-03T08:30:00Z",
+      "completedAt": "2025-06-03T21:30:00+05:30",
+      "details": "Decap CMS has been integrated with the following configurations:\n- Admin interface at /admin/\n- Git Gateway authentication\n- Content types: Pages and Posts\n- Media uploads to static/uploads\n- Netlify Identity for user management"
     },
     {
       "id": 8,
