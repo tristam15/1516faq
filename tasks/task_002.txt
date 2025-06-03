@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Set Up Hugo with Doks Theme
+# Status: done
+# Dependencies: None
+# Priority: medium
+# Description: Install and configure Hugo with Doks theme
+# Details:
+
+
+# Test Strategy:
+

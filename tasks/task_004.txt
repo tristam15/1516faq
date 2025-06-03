@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: Set Up Custom Domain
+# Status: done
+# Dependencies: None
+# Priority: medium
+# Description: Configure faq.1516.co.in with proper DNS settings
+# Details:
+
+
+# Test Strategy:
+

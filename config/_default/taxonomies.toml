@@ -1,0 +1,55 @@
+# Document taxonomies
+document = "documents"
+issuer = "issuers"
+context = "contexts"
+
+# Job taxonomies
+sector = "sectors"
+qualification = "qualifications"
+state = "states"
+
+# Common settings
+[params.taxonomy]
+  # Enable/disable taxonomy
+  enable = true
+  
+  # Enable/disable taxonomy pages
+  enableListPage = true
+  
+  # Number of items per page (0 = no pagination)
+  paginate = 10
+  
+  # Sort order (asc/desc)
+  sort = "asc"
+
+# Document taxonomy settings
+[params.taxonomy.document]
+  name = "Document Types"
+  singularName = "Document Type"
+  description = "Types of documents available"
+
+[params.taxonomy.issuer]
+  name = "Issuing Authorities"
+  singularName = "Issuing Authority"
+  description = "Organizations that issue the documents"
+
+[params.taxonomy.context]
+  name = "Contexts"
+  singularName = "Context"
+  description = "Contexts in which documents are used"
+
+# Job taxonomy settings
+[params.taxonomy.sector]
+  name = "Job Sectors"
+  singularName = "Job Sector"
+  description = "Different sectors where jobs are available"
+
+[params.taxonomy.qualification]
+  name = "Qualifications"
+  singularName = "Qualification"
+  description = "Educational qualifications required for jobs"
+
+[params.taxonomy.state]
+  name = "States"
+  singularName = "State"
+  description = "Indian states where jobs are available"

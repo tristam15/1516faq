@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Initialize Project Repository",
+      "status": "done",
+      "description": "Set up Git repository and initial project structure",
+      "createdAt": "2025-06-03T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Set Up Hugo with Doks Theme",
+      "status": "done",
+      "description": "Install and configure Hugo with Doks theme",
+      "createdAt": "2025-06-03T08:05:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Deploy to Netlify",
+      "status": "done",
+      "description": "Configure and deploy the site to Netlify",
+      "createdAt": "2025-06-03T08:10:00Z",
+      "completedAt": "2025-06-03T08:41:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Set Up Custom Domain",
+      "status": "done",
+      "description": "Configure faq.1516.co.in with proper DNS settings",
+      "createdAt": "2025-06-03T08:15:00Z",
+      "completedAt": "2025-06-03T08:42:25Z"
+    },
+    {
+      "id": 5,
+      "title": "Content Structure Setup",
+      "status": "pending",
+      "description": "Create content structure for documents and jobs",
+      "createdAt": "2025-06-03T08:20:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Implement Search Functionality",
+      "status": "pending",
+      "description": "Set up Fuse.js for client-side search",
+      "createdAt": "2025-06-03T08:25:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Decap CMS Integration",
+      "status": "pending",
+      "description": "Configure Decap CMS for content management",
+      "createdAt": "2025-06-03T08:30:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Testing and Quality Assurance",
+      "status": "pending",
+      "description": "Test all features and fix any issues",
+      "createdAt": "2025-06-03T08:35:00Z"
+    },
+    {
+      "id": 9,
+      "title": "Documentation",
+      "status": "pending",
+      "description": "Write documentation for contributors and users",
+      "createdAt": "2025-06-03T08:40:00Z"
+    },
+    {
+      "id": 10,
+      "title": "Launch Preparation",
+      "status": "pending",
+      "description": "Final checks and preparations for launch",
+      "createdAt": "2025-06-03T08:45:00Z"
+    }
+  ]
+}

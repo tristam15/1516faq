@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Initialize Project Repository",
+      "status": "done",
+      "description": "Set up Git repository and initial project structure",
+      "createdAt": "2025-06-03T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Set Up Hugo with Doks Theme",
+      "status": "done",
+      "description": "Install and configure Hugo with Doks theme",
+      "createdAt": "2025-06-03T08:05:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Deploy to Netlify",
+      "status": "done",
+      "description": "Configure and deploy the site to Netlify",
+      "createdAt": "2025-06-03T08:10:00Z",
+      "completedAt": "2025-06-03T08:41:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Set Up Custom Domain",
+      "status": "done",
+      "description": "Configure faq.1516.co.in with proper DNS settings",
+      "createdAt": "2025-06-03T08:15:00Z",
+      "completedAt": "2025-06-03T08:42:25Z"
+    },
+    {
+      "id": 5,
+      "title": "Content Structure Setup",
+      "status": "done",
+      "description": "Create content structure for documents and jobs",
+      "createdAt": "2025-06-03T08:20:00Z",
+      "completedAt": "2025-06-03T08:51:00Z",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Define Document Content Structure",
+          "description": "Define the taxonomy and front matter structure for document content type",
+          "dependencies": [],
+          "details": "Create a detailed schema for document content type including required fields (title, description, content), taxonomy categories, and metadata structure. Define how documents will be organized in the content repository.",
+          "status": "pending",
+          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure"
+        },
+        {
+          "id": 2,
+          "title": "Define Job Content Structure",
+          "description": "Define the taxonomy and front matter structure for job content type",
+          "dependencies": [],
+          "details": "Create a detailed schema for job content type including required fields (title, description, requirements, location), taxonomy categories, and metadata structure. Define how jobs will be organized in the content repository.",
+          "status": "pending",
+          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure"
+        },
+        {
+          "id": 3,
+          "title": "Implement Content Folder Structure",
+          "description": "Set up the folder structure in the content repository for both content types",
+          "dependencies": [
+            1,
+            2
+          ],
+          "details": "Create the necessary folder hierarchy in the content repository that aligns with the defined taxonomies. Ensure the structure supports content organization by categories, types, and other classification needs.",
+          "status": "pending",
+          "testStrategy": "Verify that the folder structure enables proper content organization and supports the required navigation paths"
+        },
+        {
+          "id": 4,
+          "title": "Create Content Templates",
+          "description": "Develop templates for document and job content types with predefined front matter",
+          "dependencies": [
+            1,
+            2
+          ],
+          "details": "Create template files for both content types that include all required front matter fields with appropriate default values or placeholders. These templates will serve as the starting point for content creation.",
+          "status": "pending",
+          "testStrategy": "Test templates by creating sample content entries and validating that all required fields are present"
+        },
+        {
+          "id": 5,
+          "title": "Document Content Structure Guidelines",
+          "description": "Create documentation for content structure and usage guidelines",
+          "dependencies": [
+            3,
+            4
+          ],
+          "details": "Develop comprehensive documentation that explains the content structure, taxonomy organization, required fields, and best practices for content creation. Include examples and edge cases to guide content creators.",
+          "status": "pending",
+          "testStrategy": "Review documentation with stakeholders to ensure clarity and completeness"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Implement Search Functionality",
+      "status": "pending",
+      "description": "Set up Fuse.js for client-side search",
+      "createdAt": "2025-06-03T08:25:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Decap CMS Integration",
+      "status": "pending",
+      "description": "Configure Decap CMS for content management",
+      "createdAt": "2025-06-03T08:30:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Testing and Quality Assurance",
+      "status": "pending",
+      "description": "Test all features and fix any issues",
+      "createdAt": "2025-06-03T08:35:00Z"
+    },
+    {
+      "id": 9,
+      "title": "Documentation",
+      "status": "pending",
+      "description": "Write documentation for contributors and users",
+      "createdAt": "2025-06-03T08:40:00Z"
+    },
+    {
+      "id": 10,
+      "title": "Launch Preparation",
+      "status": "pending",
+      "description": "Final checks and preparations for launch",
+      "createdAt": "2025-06-03T08:45:00Z"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Deploy to Netlify
+# Status: done
+# Dependencies: None
+# Priority: medium
+# Description: Configure and deploy the site to Netlify
+# Details:
+
+
+# Test Strategy:
+
