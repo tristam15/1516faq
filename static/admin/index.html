@@ -56,6 +56,14 @@
 
       // Initialize CMS directly - GitHub authentication will be handled by Decap CMS
       document.addEventListener('DOMContentLoaded', function() {
+        // Force clear any Netlify Identity data that might be cached
+        if (window.localStorage) {
+          Object.keys(window.localStorage).forEach(function(key) {
+            if (key.includes('netlify') || key.includes('gotrue')) {
+              window.localStorage.removeItem(key);
+            }
+          });
+        }
         // Initialize CMS
         initCMS();
       });
