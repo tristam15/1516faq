@@ -24,18 +24,43 @@
         transform: translate(-50%, -50%);
         text-align: center;
       }
+      /* Error message */
+      .error-message {
+        color: #e74c3c;
+        background: #fdf3f2;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: none;
+      }
     </style>
   </head>
   <body>
     <!-- Loading indicator -->
     <div id="loading" class="loading-spinner">
       <p>Loading CMS...</p>
+      <div id="error-message" class="error-message"></div>
     </div>
 
     <!-- CMS container -->
     <div id="nc-root"></div>
 
     <script>
+      // Set Netlify site URL (crucial for Git Gateway)
+      if (!localStorage.getItem('netlifySiteURL')) {
+        localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
+      }
+      
+      // Error handling function
+      function showError(message) {
+        const errorEl = document.getElementById('error-message');
+        if (errorEl) {
+          errorEl.textContent = message;
+          errorEl.style.display = 'block';
+        }
+        console.error(message);
+      }
+
       // Initialize Netlify Identity
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -49,28 +74,48 @@
           }
         });
       } else {
-        // If Netlify Identity fails to load, try initializing CMS anyway
-        initCMS();
+        // If Netlify Identity fails to load, show error
+        showError('Netlify Identity widget failed to load. Please refresh the page.');
+        // Try initializing CMS anyway after a delay
+        setTimeout(initCMS, 2000);
       }
 
       function initCMS() {
-        // Hide loading spinner
-        document.getElementById('loading').style.display = 'none';
-        
-        // Initialize Decap CMS
-        CMS.init();
-        
-        // Optional: Log CMS initialization
-        console.log('Decap CMS initialized');
-        
-        // Optional: Listen for CMS events
-        CMS.registerEventListener({
-          onEvent: (event) => {
-            if (event.name === 'preview-iframe-loaded') {
-              console.log('CMS preview iframe loaded');
-            }
+        try {
+          // Check if CMS object is available
+          if (typeof CMS === 'undefined') {
+            showError('CMS object not available. Please check console for errors.');
+            return;
           }
-        });
+          
+          // Initialize Decap CMS
+          CMS.init();
+          
+          // Hide loading spinner after successful initialization
+          setTimeout(() => {
+            const loadingEl = document.getElementById('loading');
+            if (loadingEl && document.querySelector('.nc-root')) {
+              loadingEl.style.display = 'none';
+            }
+          }, 1000);
+          
+          // Log CMS initialization
+          console.log('Decap CMS initialized');
+          
+          // Listen for CMS events
+          CMS.registerEventListener({
+            onEvent: (event) => {
+              if (event.name === 'preview-iframe-loaded') {
+                console.log('CMS preview iframe loaded');
+              } else if (event.name === 'error') {
+                showError('CMS Error: ' + (event.message || 'Unknown error'));
+              }
+            }
+          });
+        } catch (error) {
+          showError('Error initializing CMS: ' + error.message);
+          console.error(error);
+        }
       }
     </script>
   </body>
