@@ -3,7 +3,7 @@ backend:
   repo: tristam15/1516faq  # Replace with your actual GitHub username/repo
   branch: main  # or your main branch name
   auth_scope: repo  # Required for accessing private repositories
-  base_url: https://api.netlify.com
+  site_domain: faq.1516.co.in  # Your Netlify site domain
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
