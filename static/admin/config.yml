@@ -1,6 +1,15 @@
 backend:
   name: git-gateway
   branch: main  # or your main branch name
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+
+# Uncomment local_backend when using a local development server
+# local_backend: true
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -26,3 +35,26 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "faqs"
+    label: "FAQs"
+    folder: "content/faqs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Question", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Answer", name: "body", widget: "markdown"}
+      - {label: "Order", name: "weight", widget: "number", default: 100}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "config.toml"
+        label: "Site Settings"
+        name: "config"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Base URL", name: "baseURL", widget: "string"}
+          - {label: "Language Code", name: "languageCode", widget: "string", default: "en-us"}
