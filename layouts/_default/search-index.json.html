@@ -1,0 +1,29 @@
+{{/* Get all regular pages */}}
+{{- $pages := .Site.RegularPages -}}
+
+{{/* Initialize an empty slice to hold our search items */}}
+{{- $searchItems := slice -}}
+
+{{/* Process each page */}}
+{{- range $page := $pages -}}
+  {{/* Clean and prepare the content */}}
+  {{- $content := $page.Plain | htmlUnescape | plainify | replaceRE "\\s+" " " -}}
+  {{- $description := $page.Description | default (substr $content 0 200) -}}
+  {{- $section := (index (split $page.RelPermalink "/") 1) | humanize -}}
+  
+  {{/* Create a search item */}}
+  {{- $item := dict
+    "title" $page.Title
+    "content" $content
+    "description" $description
+    "section" $section
+    "permalink" $page.RelPermalink
+    "date" ($page.Date.Format "2006-01-02")
+  -}}
+  
+  {{/* Add to our slice */}}
+  {{- $searchItems = $searchItems | append $item -}}
+{{- end -}}
+
+{{/* Output as JSON */}}
+{{- dict "items" $searchItems | jsonify -}}

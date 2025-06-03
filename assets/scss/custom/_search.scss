@@ -1,0 +1,132 @@
+// Search Component Styles
+.search-container {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  position: relative;
+  
+  #searchInput {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem 0 0 0.25rem;
+    
+    &:focus {
+      border-color: #86b7fe;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      outline: 0;
+    }
+  }
+  
+  #searchButton {
+    border-radius: 0 0.25rem 0.25rem 0;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Loading and empty states
+  .spinner-border {
+    width: 2rem;
+    height: 2rem;
+    border-width: 0.2em;
+  }
+  
+  .bi-search {
+    font-size: 3rem;
+  }
+  
+  .text-center {
+    padding: 2rem 1rem;
+    
+    p {
+      color: #6c757d;
+      margin-bottom: 0.5rem;
+    }
+    
+    small {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+  }
+  
+  // Alert styles
+  .alert {
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    
+    .bi {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  // Search results summary
+  .search-results-summary {
+    font-size: 0.9rem;
+    color: #6c757d;
+    padding: 0.5rem 0;
+  }
+
+  #searchResults {
+    .list-group-item {
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.075);
+      transition: all 0.2s ease-in-out;
+      padding: 1rem 1.25rem;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      
+      h5 {
+        color: #0d6efd;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        line-height: 1.4;
+        
+        mark {
+          background-color: rgba(255, 193, 7, 0.3);
+          padding: 0.1em 0.2em;
+          border-radius: 0.2em;
+        }
+      }
+      
+      .badge {
+        font-weight: 500;
+        font-size: 0.7rem;
+        padding: 0.35em 0.65em;
+      }
+      
+      p {
+        margin-bottom: 0.5rem;
+        color: #495057;
+        line-height: 1.5;
+      }
+      
+      small.text-muted {
+        font-size: 0.75rem;
+        color: #6c757d !important;
+        display: block;
+        margin-top: 0.25rem;
+      }
+      
+      // Match percentage badge
+      .badge.bg-secondary {
+        font-size: 0.65rem;
+        padding: 0.25em 0.5em;
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  .no-results, .initial-message {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    color: #6c757d;
+  }
+}
