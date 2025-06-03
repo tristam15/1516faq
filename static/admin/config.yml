@@ -2,8 +2,9 @@ backend:
   name: github
   repo: tristam15/1516faq  # Replace with your actual GitHub username/repo
   branch: main  # or your main branch name
-  auth_endpoint: auth  # Required for Netlify's OAuth provider
-  api_root: https://api.github.com  # GitHub API endpoint
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_domain: faq.1516.co.in
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
