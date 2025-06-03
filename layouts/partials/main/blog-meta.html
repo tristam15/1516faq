@@ -1,0 +1,6 @@
+{{- if and (isset .Params "contributors") (gt (len .Params.contributors) 0) -}}
+  {{- range $index, $contributor := .Params.contributors -}}
+    {{- if $index }}, {{ end -}}
+    {{- $contributor -}}
+  {{- end -}}
+{{- end -}}
