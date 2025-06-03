@@ -56,7 +56,7 @@
 
       // Initialize CMS directly - GitHub authentication will be handled by Decap CMS
       document.addEventListener('DOMContentLoaded', function() {
-        // Force clear any Netlify Identity data that might be cached
+        // Clear any cached data
         if (window.localStorage) {
           Object.keys(window.localStorage).forEach(function(key) {
             if (key.includes('netlify') || key.includes('gotrue')) {
@@ -64,6 +64,12 @@
             }
           });
         }
+        
+        // For local development, set the site domain
+        if (window.location.hostname === 'localhost') {
+          localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
+        }
+        
         // Initialize CMS
         initCMS();
       });

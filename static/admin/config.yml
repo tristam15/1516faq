@@ -5,6 +5,9 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
   site_domain: faq.1516.co.in
+  # Enable local_backend for local development
+  # Comment out or remove this section when deploying to production
+#local_backend: true
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
