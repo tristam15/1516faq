@@ -37,7 +37,7 @@
       "status": "done",
       "description": "Create content structure for documents and jobs",
       "createdAt": "2025-06-03T08:20:00Z",
-      "completedAt": "2025-06-03T08:51:00Z",
+      "completedAt": "2025-06-03T17:16:31+05:30",
       "subtasks": [
         {
           "id": 1,
@@ -45,8 +45,9 @@
           "description": "Define the taxonomy and front matter structure for document content type",
           "dependencies": [],
           "details": "Create a detailed schema for document content type including required fields (title, description, content), taxonomy categories, and metadata structure. Define how documents will be organized in the content repository.",
-          "status": "pending",
-          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure"
+          "status": "done",
+          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure",
+          "completedAt": "2025-06-03T17:16:31+05:30"
         },
         {
           "id": 2,
@@ -54,8 +55,9 @@
           "description": "Define the taxonomy and front matter structure for job content type",
           "dependencies": [],
           "details": "Create a detailed schema for job content type including required fields (title, description, requirements, location), taxonomy categories, and metadata structure. Define how jobs will be organized in the content repository.",
-          "status": "pending",
-          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure"
+          "status": "done",
+          "testStrategy": "Validate the schema against PRD requirements and ensure it supports the required URL structure",
+          "completedAt": "2025-06-03T17:16:31+05:30"
         },
         {
           "id": 3,
@@ -66,8 +68,9 @@
             2
           ],
           "details": "Create the necessary folder hierarchy in the content repository that aligns with the defined taxonomies. Ensure the structure supports content organization by categories, types, and other classification needs.",
-          "status": "pending",
-          "testStrategy": "Verify that the folder structure enables proper content organization and supports the required navigation paths"
+          "status": "done",
+          "testStrategy": "Verify that the folder structure enables proper content organization and supports the required navigation paths",
+          "completedAt": "2025-06-03T17:16:31+05:30"
         },
         {
           "id": 4,
@@ -78,8 +81,9 @@
             2
           ],
           "details": "Create template files for both content types that include all required front matter fields with appropriate default values or placeholders. These templates will serve as the starting point for content creation.",
-          "status": "pending",
-          "testStrategy": "Test templates by creating sample content entries and validating that all required fields are present"
+          "status": "done",
+          "testStrategy": "Test templates by creating sample content entries and validating that all required fields are present",
+          "completedAt": "2025-06-03T17:16:31+05:30"
         },
         {
           "id": 5,
@@ -90,8 +94,9 @@
             4
           ],
           "details": "Develop comprehensive documentation that explains the content structure, taxonomy organization, required fields, and best practices for content creation. Include examples and edge cases to guide content creators.",
-          "status": "pending",
-          "testStrategy": "Review documentation with stakeholders to ensure clarity and completeness"
+          "status": "done",
+          "testStrategy": "Review documentation with stakeholders to ensure clarity and completeness",
+          "completedAt": "2025-06-03T17:16:31+05:30"
         }
       ]
     },
