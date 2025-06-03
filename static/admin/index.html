@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <!-- Include the script that enables Netlify Identity on this page. -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Include the script that makes Decap CMS work. -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
     <style>
@@ -46,11 +44,6 @@
     <div id="nc-root"></div>
 
     <script>
-      // Set Netlify site URL (crucial for Git Gateway)
-      if (!localStorage.getItem('netlifySiteURL')) {
-        localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
-      }
-      
       // Error handling function
       function showError(message) {
         const errorEl = document.getElementById('error-message');
@@ -61,24 +54,11 @@
         console.error(message);
       }
 
-      // Initialize Netlify Identity
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          } else {
-            // User is logged in, initialize CMS
-            initCMS();
-          }
-        });
-      } else {
-        // If Netlify Identity fails to load, show error
-        showError('Netlify Identity widget failed to load. Please refresh the page.');
-        // Try initializing CMS anyway after a delay
-        setTimeout(initCMS, 2000);
-      }
+      // Initialize CMS directly - GitHub authentication will be handled by Decap CMS
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize CMS
+        initCMS();
+      });
 
       function initCMS() {
         try {

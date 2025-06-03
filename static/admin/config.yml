@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tristam15/1516faq  # Replace with your actual GitHub username/repo
   branch: main  # or your main branch name
+  auth_scope: repo  # Required for accessing private repositories
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
