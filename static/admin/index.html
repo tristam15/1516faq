@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
     <!-- Include the script that makes Decap CMS work. -->
-    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js" type="text/javascript" defer></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <style>
       /* Add some basic styling */
       body {
@@ -44,83 +44,25 @@
     <div id="nc-root"></div>
 
     <script>
-      // Error handling function
-      function showError(message) {
-        const errorEl = document.getElementById('error-message');
-        if (errorEl) {
-          errorEl.textContent = message;
-          errorEl.style.display = 'block';
-        }
-        console.error(message);
+      // For local development, set the site domain for OAuth
+      if (window.location.hostname === 'localhost') {
+        localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
       }
-
-      // Wait for the CMS script to load before initializing
-      window.addEventListener('load', function() {
-        // Clear any cached Netlify Identity data to avoid conflicts
-        if (window.localStorage) {
-          Object.keys(window.localStorage).forEach(function(key) {
-            if (key.includes('netlify') || key.includes('gotrue')) {
-              window.localStorage.removeItem(key);
-            }
-          });
-        }
-        
-        // For local development, set the site domain for OAuth
-        if (window.location.hostname === 'localhost') {
-          localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
-          console.log('Set netlifySiteURL for local development');
-        }
-        
-        // Short delay to ensure CMS is fully loaded
-        setTimeout(initCMS, 100);
-      });
-
-      function initCMS() {
-        try {
-          // Check if CMS object is available
-          if (typeof CMS === 'undefined') {
-            showError('CMS object not available. Please check console for errors.');
-            console.error('CMS object is not defined. Make sure the Decap CMS script is loaded correctly.');
-            return;
+      
+      // Clear any cached Netlify Identity data to avoid conflicts
+      if (window.localStorage) {
+        Object.keys(window.localStorage).forEach(function(key) {
+          if (key.includes('netlify') || key.includes('gotrue')) {
+            window.localStorage.removeItem(key);
           }
-          
-          console.log('Initializing Decap CMS with GitHub backend...');
-          
-          // Initialize Decap CMS
-          CMS.init();
-          
-          // Hide loading spinner after successful initialization
-          setTimeout(() => {
-            const loadingEl = document.getElementById('loading');
-            if (loadingEl) {
-              if (document.querySelector('.nc-root')) {
-                loadingEl.style.display = 'none';
-                console.log('CMS initialized successfully');
-              } else {
-                console.log('CMS container not found yet, waiting...');
-              }
-            }
-          }, 1000);
-          
-          // Listen for CMS events
-          CMS.registerEventListener({
-            onEvent: (event) => {
-              console.log('CMS Event:', event.name);
-              if (event.name === 'preview-iframe-loaded') {
-                console.log('CMS preview iframe loaded');
-              } else if (event.name === 'error') {
-                showError('CMS Error: ' + (event.message || 'Unknown error'));
-                console.error('CMS Error:', event);
-              } else if (event.name === 'auth' || event.name === 'login') {
-                console.log('Authentication event:', event);
-              }
-            }
-          });
-        } catch (error) {
-          showError('Error initializing CMS: ' + error.message);
-          console.error('Error initializing CMS:', error);
-        }
+        });
       }
+
+      // Initialize CMS when the page loads
+      window.addEventListener('DOMContentLoaded', function() {
+        // Initialize Decap CMS
+        CMS.init();
+      });
     </script>
   </body>
 </html>
