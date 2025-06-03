@@ -1,2 +1,7 @@
 .env
 node_modules
+
+# Hugo build files
+.hugo_build.lock
+public/
+resources/
