@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager (Standalone)</title>
+    
+    <!-- Include the Netlify Identity Widget for authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .error-message {
+        color: #e74c3c;
+        background: #fdf3f2;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: none;
+      }
+      .debug-panel {
+        margin-top: 20px;
+        padding: 10px;
+        background: #eee;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 16px;
+        background: #2980b9;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background: #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Decap CMS Standalone Test</h1>
+    
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-spinner">
+      <p>Preparing CMS environment...</p>
+      <div id="error-message" class="error-message"></div>
+    </div>
+    
+    <!-- Debug panel -->
+    <div class="debug-panel">
+      <h3>Debug Panel</h3>
+      <div id="debug-output"></div>
+      <button id="init-cms">Initialize CMS</button>
+      <button id="check-netlify-identity">Check Netlify Identity</button>
+      <button id="set-site-url">Set Site URL</button>
+      <button id="load-cms-script">Load CMS Script</button>
+    </div>
+    
+    <!-- CMS container -->
+    <div id="nc-root"></div>
+    
+    <script>
+      // Debug output function
+      function debug(message) {
+        const debugOutput = document.getElementById('debug-output');
+        const logEntry = document.createElement('p');
+        logEntry.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+        debugOutput.appendChild(logEntry);
+        console.log(message);
+      }
+      
+      // Error handling function
+      function showError(message) {
+        const errorEl = document.getElementById('error-message');
+        if (errorEl) {
+          errorEl.textContent = message;
+          errorEl.style.display = 'block';
+        }
+        debug(`ERROR: ${message}`);
+      }
+      
+      // Set up button handlers
+      document.getElementById('init-cms').addEventListener('click', function() {
+        debug('Attempting to initialize CMS...');
+        try {
+          if (typeof window.CMS !== 'undefined') {
+            debug('CMS object found, initializing...');
+            window.CMS.init();
+            debug('CMS initialization called');
+          } else {
+            showError('CMS object not available. Please load the CMS script first.');
+          }
+        } catch (e) {
+          showError(`Error initializing CMS: ${e.message}`);
+        }
+      });
+      
+      document.getElementById('check-netlify-identity').addEventListener('click', function() {
+        debug('Checking Netlify Identity status...');
+        if (window.netlifyIdentity) {
+          debug('Netlify Identity is loaded');
+          window.netlifyIdentity.on('init', user => {
+            debug(`Netlify Identity initialized. User authenticated: ${!!user}`);
+          });
+        } else {
+          showError('Netlify Identity widget is not loaded');
+        }
+      });
+      
+      document.getElementById('set-site-url').addEventListener('click', function() {
+        const siteUrl = window.location.origin;
+        localStorage.setItem('netlifySiteURL', siteUrl);
+        debug(`Set netlifySiteURL to: ${siteUrl}`);
+      });
+      
+      document.getElementById('load-cms-script').addEventListener('click', function() {
+        debug('Loading Decap CMS script...');
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js';
+        script.onload = function() {
+          debug('Decap CMS script loaded successfully');
+          if (typeof window.CMS !== 'undefined') {
+            debug('CMS object is available');
+          } else {
+            showError('CMS object is not available after script load');
+          }
+        };
+        script.onerror = function(e) {
+          showError(`Error loading Decap CMS script: ${e}`);
+        };
+        document.head.appendChild(script);
+      });
+      
+      // Initial setup
+      document.addEventListener('DOMContentLoaded', function() {
+        debug('Page loaded');
+        debug(`Current origin: ${window.location.origin}`);
+        const netlifySiteURL = localStorage.getItem('netlifySiteURL');
+        debug(`Current netlifySiteURL: ${netlifySiteURL || 'not set'}`);
+      });
+    </script>
+  </body>
+</html>
