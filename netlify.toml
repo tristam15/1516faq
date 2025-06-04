@@ -14,10 +14,6 @@
 [identity.external]
   provider = ["github"]
 
-# Enable Git Gateway
-[git_gateway]
-  allowed_roles = ["admin"]
-  enabled = true
 
 # Enable large media
 [[plugins]]
