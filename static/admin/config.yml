@@ -7,9 +7,9 @@ backend:
   auth_endpoint: auth
   site_domain: faq.1516.co.in
 
-# Enable local_backend for local development
-local_backend:
-  url: http://localhost:8081/api/v1
+# Enable local_backend for local development (comment out for production)
+# local_backend:
+#   url: http://localhost:8081/api/v1
 
 commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
