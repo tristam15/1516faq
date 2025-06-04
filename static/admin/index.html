@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <!-- Include the script that makes Decap CMS work. -->
-    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js" defer></script>
     <style>
       /* Add some basic styling */
       body {
@@ -14,61 +12,26 @@
         padding: 0;
         background: #f5f5f5;
       }
-      /* Loading spinner */
-      .loading-spinner {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      /* Error message */
-      .error-message {
-        color: #e74c3c;
-        background: #fdf3f2;
-        padding: 10px;
-        border-radius: 4px;
-        margin-top: 10px;
-        display: none;
-      }
     </style>
-  </head>
-  <body>
-    <!-- Loading indicator -->
-    <div id="loading" class="loading-spinner">
-      <p>Loading CMS...</p>
-      <div id="error-message" class="error-message"></div>
-    </div>
-
-    <!-- CMS container -->
-    <div id="nc-root"></div>
-
     <script>
-      // For local development, set the site domain for OAuth
-      if (window.location.hostname === 'localhost') {
-        localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
-      }
-      
       // Clear any cached Netlify Identity data to avoid conflicts
+      // Also set netlifySiteURL for local dev if needed by the OAuth flow
       if (window.localStorage) {
         Object.keys(window.localStorage).forEach(function(key) {
           if (key.includes('netlify') || key.includes('gotrue')) {
             window.localStorage.removeItem(key);
           }
         });
-      }
-
-      // Initialize CMS when the page loads
-      document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOMContentLoaded event fired. Initializing CMS...');
-        // Initialize Decap CMS
-        if (window.CMS) {
-          CMS.init();
-          console.log('CMS.init() called.');
-        } else {
-          console.error('CMS object not found on DOMContentLoaded.');
+        if (window.location.hostname === 'localhost') {
+          localStorage.setItem('netlifySiteURL', 'https://faq.1516.co.in');
+          console.log('Set netlifySiteURL for local development');
         }
-      });
+      }
     </script>
+    <!-- Include the Decap CMS script. It should auto-initialize. -->
+    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js" defer></script>
+  </head>
+  <body>
+    <!-- Decap CMS will mount here or create its own root elements -->
   </body>
 </html>
