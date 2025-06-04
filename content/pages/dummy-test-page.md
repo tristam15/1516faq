@@ -1,6 +1,6 @@
 ---
 title: Dummy Test Page
-date: null
+date: 2025-06-03T02:11:00.000Z
 ---
 ## 🧾 Who Needs an Equivalency Certificate?
 
