@@ -66,3 +66,40 @@ We welcome contributions! Please read our [Contribution Guidelines](CONTRIBUTING
 ## 📄 License
 
 This project is [MIT licensed](LICENSE).
+
+## ⚙️ Recent Configuration Updates (June 2025)
+
+This section outlines significant updates made to the site's configuration and functionality:
+
+### Decap CMS Authentication Changed to GitHub OAuth
+- Switched from Netlify Identity to GitHub OAuth for Decap CMS login.
+- **`static/admin/config.yml` Updates:**
+    - Changed `backend.name` from `git-gateway` to `github`.
+    - Configured `repo`, `branch`, `auth_scope`.
+    - Set up Netlify as the OAuth provider using `base_url: https://api.netlify.com`, `auth_endpoint`, and `site_domain`.
+    - `local_backend` was configured for local development proxy but is commented out for production.
+- **`static/admin/index.html` Simplification:**
+    - Removed Netlify Identity widget and related JavaScript.
+    - Decap CMS now auto-initializes without manual `CMS.init()` or a dedicated `#nc-root` div.
+- **GitHub OAuth Application:**
+    - Resolved `redirect_uri` mismatch errors by ensuring `https://api.netlify.com/auth/done` is correctly listed in the GitHub OAuth App's "Authorization callback URLs".
+
+### Content & Theme Adjustments
+- **Publishing New Content:**
+    - Ensured new pages created via Decap CMS (e.g., "Dummy Test Page") are published by adding `draft: false` to their front matter. This was necessary as new content was not appearing on the live site despite being in the Git repository.
+- **Doks Theme Default:**
+    - Set the Doks theme to default to **light mode**.
+    - Modified `colorMode = "light"` in `config/_default/params.toml`.
+- **Homepage Content:**
+    - Updated `content/_index.md` to provide a more relevant welcome message for the "1516 FAQ & Documentation Hub".
+    - Added links to main content sections (`/faqs/`, `/pages/`, `/posts/`) and the "Dummy Test Page".
+
+### Netlify Configuration (`netlify.toml`)
+- **Content Security Policy (CSP):**
+    - Updated CSP headers to allow scripts from `unpkg.com` (for Decap CMS).
+    - Allowed connections to `api.netlify.com` and `api.github.com`.
+    - Added `'unsafe-eval'` to `script-src` to permit dynamic JavaScript evaluation required by Decap CMS.
+- **Git Gateway Removed:**
+    - The `git_gateway` section was removed from `netlify.toml` as it's no longer used with the GitHub OAuth backend.
+
+These changes ensure a more streamlined authentication process for content editors, proper content publishing, and an improved user experience with the theme and homepage.
