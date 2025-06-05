@@ -1,10 +1,10 @@
 ---
 title: "Birth Certificate in Guntur"
 description: "Apply for a birth certificate in Guntur Municipal Corporation"
-document_type: "birth-certificate"
+document: "birth-certificate"
 issuer: "municipal-corporation"
 context: "andhra-pradesh"
-qualifications:
+qualification:
   - "10th"
 state: "andhra-pradesh"
 fee: "₹30"

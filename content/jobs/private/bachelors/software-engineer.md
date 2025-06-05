@@ -2,7 +2,7 @@
 title: "Software Engineer"
 description: "Entry-level software engineer position"
 sector: "private"
-min_qualification: "bachelors"
+qualification: "bachelors"
 state: "telangana"
 salary: "₹4 - ₹6 LPA"
 job_type: "Permanent"

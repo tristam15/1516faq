@@ -1,10 +1,10 @@
 ---
 title: "SC Caste Certificate Application in Andhra Pradesh"
 description: "Guide to obtaining an SC Caste Certificate through the Revenue Department in Andhra Pradesh"
-document_type: "caste-certificate"
+document: "caste-certificate"
 issuer: "revenue-department"
 context: "andhra-pradesh"
-qualifications:
+qualification:
   - "10th"
   - "12th"
   - "bachelors"

@@ -2,7 +2,7 @@
 title: "Electrical Technician"
 description: "Private firm hiring diploma holders in electrical engineering"
 sector: "private"
-min_qualification: "diploma"
+qualification: "diploma"
 state: "telangana"
 salary: "₹20,000 - ₹25,000 per month"
 job_type: "Permanent"

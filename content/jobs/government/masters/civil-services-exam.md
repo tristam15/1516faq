@@ -2,7 +2,7 @@
 title: "Civil Services Examination"
 description: "UPSC Civil Services exam notification"
 sector: "government"
-min_qualification: "masters"
+qualification: "masters"
 state: "india"
 salary: "As per rules"
 job_type: "Permanent"

@@ -2,7 +2,7 @@
 title: "State Tax Officer"
 description: "Recruitment for graduates as State Tax Officers"
 sector: "government"
-min_qualification: "bachelors"
+qualification: "bachelors"
 state: "telangana"
 salary: "₹45,000 - ₹80,000 per month"
 job_type: "Permanent"

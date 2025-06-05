@@ -1,10 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 description: ""
-document_type: ""  # e.g., income-certificate, equivalency-certificate
+document: ""  # e.g., income-certificate, equivalency-certificate
 issuer: ""  # e.g., revenue-department, education-board
 context: ""  # e.g., telangana, andhra-pradesh
-qualifications:  # List of applicable qualifications
+qualification:  # List of applicable qualifications
   - "10th"
   - "12th"
   - "bachelors"

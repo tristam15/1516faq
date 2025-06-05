@@ -1,10 +1,10 @@
 ---
 title: "Apply for a New Ration Card in Andhra Pradesh"
 description: "Instructions to obtain a new ration card via Civil Supplies"
-document_type: "ration-card"
+document: "ration-card"
 issuer: "civil-supplies"
 context: "andhra-pradesh"
-qualifications:
+qualification:
   - "10th"
 state: "andhra-pradesh"
 fee: "₹20"

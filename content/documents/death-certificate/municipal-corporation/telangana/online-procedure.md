@@ -1,10 +1,10 @@
 ---
 title: "Death Certificate Online Procedure in Telangana"
 description: "How to obtain a death certificate online via the municipal corporation"
-document_type: "death-certificate"
+document: "death-certificate"
 issuer: "municipal-corporation"
 context: "telangana"
-qualifications:
+qualification:
   - "12th"
 state: "telangana"
 fee: "₹40"

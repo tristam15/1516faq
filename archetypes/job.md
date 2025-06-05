@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description: ""
 sector: ""  # e.g., government, private, healthcare
-min_qualification: ""  # e.g., 10th, 12th, bachelors
+qualification: ""  # e.g., 10th, 12th, bachelors
 state: ""  # e.g., telangana, andhra-pradesh
 salary: ""  # e.g., "₹20,000 - ₹30,000/month"
 job_type: ""  # e.g., Permanent, Contract, Internship
@@ -75,9 +75,9 @@ draft: false
 
 ## Important Dates
 
-- Application Start: 
-- Last Date: 
-- Exam/Interview Date: 
+- Application Start:
+- Last Date:
+- Exam/Interview Date:
 
 ## Contact Information
 

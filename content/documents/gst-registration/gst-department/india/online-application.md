@@ -1,10 +1,10 @@
 ---
 title: "GST Registration Online Application"
 description: "Procedure for businesses to register under GST"
-document_type: "gst-registration"
+document: "gst-registration"
 issuer: "gst-department"
 context: "india"
-qualifications:
+qualification:
   - "bachelors"
 state: ""
 fee: "Free"

@@ -2,7 +2,7 @@
 title: "Customer Support Executive"
 description: "Call center job for 12th pass candidates"
 sector: "private"
-min_qualification: "12th"
+qualification: "12th"
 state: "telangana"
 salary: "₹18,000 per month"
 job_type: "Permanent"

@@ -2,7 +2,7 @@
 title: "Firefighter"
 description: "Government recruitment for firefighters"
 sector: "government"
-min_qualification: "bachelors"
+qualification: "bachelors"
 state: "andhra-pradesh"
 salary: "₹28,000 per month"
 job_type: "Permanent"

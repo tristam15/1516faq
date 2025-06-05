@@ -2,7 +2,7 @@
 title: "Staff Nurse"
 description: "Healthcare facility hiring qualified nurses"
 sector: "healthcare"
-min_qualification: "bachelors"
+qualification: "bachelors"
 state: "andhra-pradesh"
 salary: "₹30,000 per month"
 job_type: "Contract"

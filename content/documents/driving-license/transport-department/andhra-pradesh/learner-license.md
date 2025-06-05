@@ -1,10 +1,10 @@
 ---
 title: "Learner's Licence Application in Andhra Pradesh"
 description: "Guide to obtain a learner's licence via Transport Department"
-document_type: "driving-license"
+document: "driving-license"
 issuer: "transport-department"
 context: "andhra-pradesh"
-qualifications:
+qualification:
   - "10th"
   - "12th"
 state: "andhra-pradesh"

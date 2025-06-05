@@ -1,10 +1,10 @@
 ---
 title: "Apply for a New PAN Card"
 description: "Steps to get a new Permanent Account Number online"
-document_type: "pan-card"
+document: "pan-card"
 issuer: "income-tax-department"
 context: "india"
-qualifications:
+qualification:
   - "12th"
 state: ""
 fee: "₹93"

@@ -2,7 +2,7 @@
 title: "Data Entry Operator"
 description: "Private sector opening for 10th pass candidates"
 sector: "private"
-min_qualification: "10th"
+qualification: "10th"
 state: "andhra-pradesh"
 salary: "₹12,000 - ₹15,000 per month"
 job_type: "Contract"

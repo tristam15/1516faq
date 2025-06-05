@@ -1,10 +1,10 @@
 ---
 title: "Birth Certificate Application in Hyderabad"
 description: "Steps to apply for a birth certificate from the Hyderabad municipal corporation"
-document_type: "birth-certificate"
+document: "birth-certificate"
 issuer: "municipal-corporation"
 context: "telangana"
-qualifications:
+qualification:
   - "10th"
 state: "telangana"
 fee: "₹30"

@@ -1,10 +1,10 @@
 ---
 title: "How to Apply for Income Certificate in Telangana"
 description: "Step-by-step guide to apply for income certificate through MeeSeva in Telangana"
-document_type: "income-certificate"
+document: "income-certificate"
 issuer: "revenue-department"
 context: "telangana"
-qualifications: ["10th", "12th", "bachelors", "masters"]
+qualification: ["10th", "12th", "bachelors", "masters"]
 state: "telangana"
 fee: "₹100"
 validity: "1 year"
@@ -65,6 +65,7 @@ An Income Certificate is an official document issued by the Revenue Department o
 ## Detailed Instructions
 
 ### Online Application
+
 1. Visit the [MeeSeva portal](https://www.telangana.meeseva.telangana.gov.in)
 2. Select 'Revenue Department' and then 'Income Certificate'
 3. Fill in the application form with all required details
@@ -73,6 +74,7 @@ An Income Certificate is an official document issued by the Revenue Department o
 6. Note down the application number for future reference
 
 ### Offline Application
+
 1. Visit your nearest MeeSeva center
 2. Collect and fill out the application form
 3. Submit the form along with self-attested copies of required documents

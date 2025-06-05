@@ -1,10 +1,10 @@
 ---
 title: "Patta Transfer Procedure in Telangana"
 description: "Steps for transferring land records (Patta)"
-document_type: "land-records"
+document: "land-records"
 issuer: "revenue-department"
 context: "telangana"
-qualifications:
+qualification:
   - "bachelors"
 state: "telangana"
 fee: "₹500"

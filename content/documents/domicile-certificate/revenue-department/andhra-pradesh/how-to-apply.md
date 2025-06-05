@@ -1,10 +1,10 @@
 ---
 title: "How to Apply for Domicile Certificate in Andhra Pradesh"
 description: "Procedure for domicile certificate through Revenue Department"
-document_type: "domicile-certificate"
+document: "domicile-certificate"
 issuer: "revenue-department"
 context: "andhra-pradesh"
-qualifications:
+qualification:
   - "10th"
   - "12th"
 state: "andhra-pradesh"

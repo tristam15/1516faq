@@ -2,7 +2,7 @@
 title: "Clerk Typist Recruitment"
 description: "Government clerical position for 12th pass candidates"
 sector: "government"
-min_qualification: "12th"
+qualification: "12th"
 state: "telangana"
 salary: "₹20,000 - ₹25,000 per month"
 job_type: "Permanent"

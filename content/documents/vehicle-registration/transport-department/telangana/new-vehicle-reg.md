@@ -1,10 +1,10 @@
 ---
 title: "New Vehicle Registration in Telangana"
 description: "Guide to register a new vehicle with the Transport Department"
-document_type: "vehicle-registration"
+document: "vehicle-registration"
 issuer: "transport-department"
 context: "telangana"
-qualifications:
+qualification:
   - "bachelors"
 state: "telangana"
 fee: "Varies"

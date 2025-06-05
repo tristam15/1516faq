@@ -1,10 +1,10 @@
 ---
 title: "Marriage Certificate Process in Telangana"
 description: "Step-by-step registration of marriage at Telangana"
-document_type: "marriage-certificate"
+document: "marriage-certificate"
 issuer: "registration-department"
 context: "telangana"
-qualifications:
+qualification:
   - "bachelors"
 state: "telangana"
 fee: "₹200"

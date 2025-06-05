@@ -1,10 +1,10 @@
 ---
 title: "Voter ID New Registration in Telangana"
 description: "Step-by-step voter ID application through Election Commission"
-document_type: "voter-id"
+document: "voter-id"
 issuer: "election-commission"
 context: "telangana"
-qualifications:
+qualification:
   - "12th"
 state: "telangana"
 fee: "Free"

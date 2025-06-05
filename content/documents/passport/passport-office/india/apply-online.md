@@ -1,10 +1,10 @@
 ---
 title: "How to Apply for an Indian Passport Online"
 description: "Instructions for online passport application via Passport Seva"
-document_type: "passport"
+document: "passport"
 issuer: "passport-office"
 context: "india"
-qualifications:
+qualification:
   - "10th"
   - "12th"
   - "bachelors"
