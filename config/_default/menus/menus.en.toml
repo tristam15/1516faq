@@ -88,3 +88,8 @@
 #   name = "Terms of Service"
 #   url = "/terms/"
 #   weight = 20
+[[footer]]
+  name = "Contact"
+  url = "/pages/contact/"
+  weight = 20
+
