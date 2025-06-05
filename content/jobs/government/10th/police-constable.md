@@ -2,7 +2,7 @@
 title: "Police Constable (Male/Female) - Telangana State Police"
 description: "Recruitment notification for Police Constable positions in Telangana State Police Department"
 sector: "government"
-min_qualification: "10th"
+qualification: "10th"
 state: "telangana"
 salary: "₹24,000 - ₹70,000 per month"
 job_type: "Permanent"
@@ -64,7 +64,7 @@ notes: |
   - Regular updates will be available on the official website
 
 # Metadata
-keywords: 
+keywords:
   - "police constable recruitment"
   - "telangana police jobs"
   - "10th pass government jobs"
@@ -90,14 +90,17 @@ Telangana State Level Police Recruitment Board (TSLPRB) invites applications fro
 ## Eligibility Criteria
 
 ### Educational Qualification
+
 - Must have passed SSC/10th Class from a recognized Board/Institution.
 - Must have studied Telugu as one of the subjects in 10th class or must be able to read and write Telugu.
 
 ### Age Limit (as on 01/07/2025)
+
 - Minimum Age: 18 Years
 - Maximum Age: 22 Years
 
 **Age Relaxation**:
+
 - SC/ST/BC: 5 Years
 - Ex-Servicemen: 3 Years + Service period
 - N.C.C. Instructors: 3 Years
@@ -106,24 +109,29 @@ Telangana State Level Police Recruitment Board (TSLPRB) invites applications fro
 ### Physical Standards
 
 **For Men**:
+
 - Height: 167.5 cm (General) / 165 cm (SC/ST)
 - Chest: 86.5 cm (with 5 cm expansion)
 
 **For Women**:
+
 - Height: 152.5 cm (General) / 150 cm (SC/ST)
 - Chest: Not applicable
 
 ## Selection Process
 
 1. **Physical Measurement Test (PMT)**
+
    - Verification of height, chest, and other physical measurements
 
 2. **Physical Efficiency Test (PET)**
+
    - 1600 meters run (Qualifying in nature)
    - Long Jump
    - Shot Put
 
 3. **Written Examination**
+
    - Paper-I: General Studies & Mental Ability (100 Marks)
    - Paper-II: English & Telugu (100 Marks)
    - Total Marks: 200
@@ -131,6 +139,7 @@ Telangana State Level Police Recruitment Board (TSLPRB) invites applications fro
    - Negative Marking: 0.25 marks for each wrong answer
 
 4. **Document Verification**
+
    - Verification of all original certificates
    - Caste certificate verification
    - Residence proof verification
