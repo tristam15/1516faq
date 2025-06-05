@@ -18,11 +18,10 @@ Welcome to the official 1516 FAQ and Documentation Hub. We're here to help you f
 
 You can browse our different sections to find what you're looking for:
 
-- **[Frequently Asked Questions (FAQs)](/faqs/)**: Get answers to common queries.
-- **[Informational Pages](/pages/)**: Find detailed guides and standalone information.
-  - Check out our example: [Dummy Test Page](/pages/dummy-test-page/)
-- **[Document Guides](/documents/)**: Step-by-step instructions for obtaining common certificates.
-- **[Job Listings](/jobs/)**: Explore opportunities based on your qualification.
-- **[Latest Posts & Updates](/posts/)**: Stay informed with our recent articles.
+*   **[Frequently Asked Questions (FAQs)](/faqs/)**: Get answers to common queries.
+*   **[Informational Pages](/pages/)**: Find detailed guides and standalone information.
+    *   Check out our example: [Dummy Test Page](/pages/dummy-test-page/)
+*   **[Latest Posts & Updates](/posts/)**: Stay informed with our recent articles.
+*   **[Contact & Feedback](/pages/contact/)**: Send us your questions or comments.
 
-We are continuously updating our content. If you can't find what you're looking for, please feel free to reach out.
+We are continuously updating our content. If you can't find what you're looking for, please [contact us](/pages/contact/).
