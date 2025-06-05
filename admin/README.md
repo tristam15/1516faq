@@ -4,20 +4,20 @@ This directory contains the configuration for Decap CMS, which provides a web-ba
 
 ## Setup Instructions
 
-1. **Enable Identity and Git Gateway**
-   - Go to your site settings on Netlify
-   - Navigate to "Identity" and enable it
-   - Under "Registration preferences", select "Invite only" for better security
-   - Click on "Enable Git Gateway" to authenticate with GitHub
+1. **Configure GitHub OAuth**
+   - Ensure the site is linked to this repository in Netlify.
+   - Create a new OAuth App under **GitHub → Settings → Developer settings → OAuth Apps**.
+   - Add `https://api.netlify.com/auth/done` to the App's **Authorization callback URLs**.
+   - In Netlify go to **Site settings → Authentication → External providers** and enter the OAuth App's client credentials.
+   - The CMS backend (see `static/admin/config.yml`) uses Netlify as the OAuth provider.
 
-2. **Invite Users**
-   - Go to the "Identity" tab in your Netlify dashboard
-   - Click on "Invite users" to invite team members
-   - Users will receive an email invitation to set up their account
+2. **Grant Repository Access**
+   - Contributors need write access to the GitHub repository.
+   - Once added as collaborators they can authenticate with GitHub to edit content.
 
 3. **Access the Admin Panel**
-   - Visit `https://your-site-url.netlify.app/admin/` to access the CMS
-   - Log in with your GitHub account
+   - Visit `https://your-site-url.netlify.app/admin/` to open Decap CMS.
+   - Log in with your GitHub account when prompted.
 
 ## Content Types
 
@@ -51,5 +51,5 @@ To test the CMS locally:
 ## Troubleshooting
 
 - If you see "Failed to load settings from config.yml", check your YAML syntax
-- For authentication issues, verify your Netlify Identity and Git Gateway settings
+- For authentication issues, verify your GitHub OAuth configuration and callback URL
 - Clear your browser cache if you make changes to the admin config
