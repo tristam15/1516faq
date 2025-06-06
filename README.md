@@ -2,6 +2,10 @@
 
 A comprehensive knowledge base for students in Andhra Pradesh & Telangana to find information about official procedures and career options based on their education level.
 
+The project uses the [Doks](https://getdoks.org/) theme for Hugo to provide a
+structured documentation experience with sidebar navigation and search. You can
+browse the live documentation at [https://faq.1516.co.in/docs/](https://faq.1516.co.in/docs/).
+
 ## 🎯 Project Goals
 
 | Goal | KPI / Metric | Target |
