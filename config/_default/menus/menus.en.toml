@@ -1,20 +1,20 @@
-# [[docs]]
-#   name = "Prologue"
-#   weight = 10
-#   identifier = "prologue"
-#   url = "/docs/prologue/"
+[[docs]]
+  name = "Guides"
+  weight = 10
+  identifier = "guides"
+  url = "/docs/guides/"
 
-# [[docs]]
-#   name = "Help"
-#   weight = 60
-#   identifier = "help"
-#   url = "/docs/help/"
+[[docs]]
+  name = "Reference"
+  weight = 20
+  identifier = "reference"
+  url = "/docs/reference/"
 
-# [[docs]]
-#   name = "Lorem"
-#   weight = 70
-#   identifier = "lorem"
-#   url = "/docs/lorem/"
+[[docs]]
+  name = "Resources"
+  weight = 30
+  identifier = "resources"
+  url = "/docs/resources/"
 
 [[guide]]
   name = "Lorem"
@@ -30,7 +30,7 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/guides/example-guide/"
+  url = "/docs/"
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
 
@@ -46,7 +46,7 @@
 
 [[main]]
   name = "Blog"
-  url = "/blog/"
+  url = "/articles/"
   weight = 30
 
 # [[social]]
@@ -74,20 +74,20 @@
 #   url = "https://www.linkedin.com/"
 #   weight = 40
 
-# [[sidebar_docs]]
-#   name = "Guides"
-#   pageRef = "/docs/guides"
-#   weight = 10
-#
-# [[sidebar_docs]]
-#   name = "Reference"
-#   pageRef = "/docs/reference"
-#   weight = 20
-#
-# [[sidebar_docs]]
-#   name = "Resources"
-#   pageRef = "/docs/resources"
-#   weight = 30
+[[sidebar_docs]]
+  name = "Guides"
+  pageRef = "/docs/guides"
+  weight = 10
+
+[[sidebar_docs]]
+  name = "Reference"
+  pageRef = "/docs/reference"
+  weight = 20
+
+[[sidebar_docs]]
+  name = "Resources"
+  pageRef = "/docs/resources"
+  weight = 30
 
 [[footer]]
   name = "Privacy Policy"
