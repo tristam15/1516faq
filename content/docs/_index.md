@@ -13,3 +13,8 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+Welcome to the documentation hub. Here you'll find step-by-step guides,
+reference pages, and additional resources to help you navigate the
+1516 FAQ knowledge base. Use the navigation sidebar to browse the
+available sections.
